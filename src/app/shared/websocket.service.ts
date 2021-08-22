@@ -6,7 +6,7 @@ export class WebsocketService {
     private listener: EventEmitter<any> = new EventEmitter();
 
     public connect() {
-        const path = `wss://chat.ims-prototype.ch/ims-chat/chat`;
+        const path = `http://localhost:8084/ims-chat/chat`;
         this.socket = new WebSocket(path);
 
         this.socket.onmessage = event => {
